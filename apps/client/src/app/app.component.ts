@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Message } from '@sandbox/domain';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'sandbox-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'client';
+  hello$ = this.http.get<Message>('/api');
+  constructor(private http: HttpClient) {}
 }
