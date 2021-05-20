@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  title = 'Welcome to Admin Application!';
   hello$ = this.http.get<Message>('/api');
+
   constructor(private http: HttpClient) {}
 }
