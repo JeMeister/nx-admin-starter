@@ -119,6 +119,7 @@ jobs:
           <<: *set_env
       - restore_cache:
           <<: *npm_cache
+      - run: ./node_modules/.bin/nx serve api
       - run: ./node_modules/.bin/nx affected:e2e ${AFFECTED_ARGS} --configuration production --headless
       - store_artifacts:
           path: dist/cypress
