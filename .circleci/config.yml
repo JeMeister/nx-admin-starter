@@ -80,8 +80,10 @@ jobs:
           <<: *set_env
       - restore_cache:
           <<: *npm_cache
+      - run: sudo npm install -g @nrwl/cli
+      - run: sudo npm install @nrwl/cli
       - run: ./node_modules/.bin/nx workspace-lint
-      - run: npx affected:lint ${AFFECTED_ARGS} --parallel
+      - run: nx affected:lint ${AFFECTED_ARGS} --parallel
   build:
     <<: *defaults
     steps:
