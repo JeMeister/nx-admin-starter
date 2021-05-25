@@ -124,7 +124,7 @@ jobs:
           command: ./node_modules/.bin/nx serve api
           background: true
       - run: ./node_modules/.bin/wait-on http://localhost:3333/api
-      - run: ./node_modules/.bin/nx affected:e2e --base=origin/development --head=HEAD --headless --verbose/
+      - run: ./node_modules/.bin/nx affected:e2e --base=origin/development --head=HEAD --headless --verbose
       - store_artifacts:
           path: dist/cypress
 
