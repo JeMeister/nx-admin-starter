@@ -6,8 +6,8 @@ version: 2
 
 defaults: &defaults
   working_directory: ~/repo
-  orbs:
-    - image: circleci/node:lts-browsers
+  machine:
+    image: ubuntu-2004:202010-01
   environment:
     NODE_OPTIONS: --max_old_space_size=8192
 
