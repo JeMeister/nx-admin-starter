@@ -7,9 +7,9 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:14-browsers
+    - image: circleci/node:lts-browsers
   environment:
-    NODE_OPTIONS: --max_old_space_size=4096
+    NODE_OPTIONS: --max_old_space_size=8192
 
 set_env: &set_env
   name: Setup Environment Variables
