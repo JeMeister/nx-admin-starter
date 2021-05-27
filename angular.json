@@ -324,8 +324,7 @@
           "options": {
             "cypressConfig": "apps/admin-e2e/cypress.json",
             "tsConfig": "apps/admin-e2e/tsconfig.e2e.json",
-            "devServerTarget": "admin:serve:development",
-            "proxyConfig": "apps/admin/proxy.conf.json"
+            "devServerTarget": "admin:serve:development"
           },
           "configurations": {
             "production": {
