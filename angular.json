@@ -285,7 +285,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
-            "proxyConfig": "apps/client/proxy.conf.json",
+            "proxyConfig": "apps/admin/proxy.conf.json",
             "port": 4201
           }
         },
